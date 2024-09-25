@@ -15,6 +15,7 @@ document
         document.getElementById("noakhali-fund").innerText = newBalance;
 
         // Transaction History
+        const date = new Date();
         const div = document.createElement("div");
         div.classList.add(
           "w-11/12",
@@ -29,7 +30,7 @@ document
             ${donateMoney} Taka is Donated for Flood-2024 at Noakhali, Bangladesh
           </h2>
           <p class="text-xl">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+            Date : ${date}
           </p>
         `;
         document.getElementById("history-section").appendChild(div);

@@ -13,6 +13,7 @@ document.getElementById("quota-donate").addEventListener("click", function () {
       document.getElementById("quota-fund").innerText = newBalance;
 
       // Transaction History
+      const date = new Date();
       const div = document.createElement("div");
       div.classList.add(
         "w-11/12",
@@ -27,7 +28,7 @@ document.getElementById("quota-donate").addEventListener("click", function () {
             ${donateMoney} Taka is Donated for Aid for Injured in the Quota Movement
           </h2>
           <p class="text-xl">
-            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+            Date : ${date}
           </p>
         `;
       document.getElementById("history-section").appendChild(div);
