@@ -12,10 +12,30 @@ document
         const afterDonateBalanceYouHave = availableBalance - donateMoney;
         document.getElementById("available-balance").innerText =
           afterDonateBalanceYouHave;
+        document.getElementById("noakhali-fund").innerText = newBalance;
+
+        // Transaction History
+        const div = document.createElement("div");
+        div.classList.add(
+          "w-11/12",
+          "border",
+          "p-7",
+          "mx-auto",
+          "rounded-xl",
+          "mb-4"
+        );
+        div.innerHTML = `
+          <h2 class="font-bold text-3xl mb-4">
+            ${donateMoney} Taka is Donated for Flood-2024 at Noakhali, Bangladesh
+          </h2>
+          <p class="text-xl">
+            Date : Tue Sep 17 2024 08:39:11 GMT +0600 (Bangladesh Standard Time)
+          </p>
+        `;
+        document.getElementById("history-section").appendChild(div);
       } else {
         alert("You Don't Have Enough Balance");
       }
-      document.getElementById("noakhali-fund").innerText = newBalance;
     } else {
       alert("Donate Atleast 1 TK");
     }
