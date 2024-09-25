@@ -42,9 +42,15 @@
         class="sticky bg-opacity-50 left-0 right-0 top-0 bg-base-100 bg-[#f9f7f3] h-24 backdrop-blur-sm"
       >
         <div class="flex justify-center pt-4 pb-2 gap-4">
-          <a class="btn btn-ghost text-xl md:text-xl bg-[#a3e635]">Donation</a>
+          <a
+            id="show-donation"
+            class="btn btn-ghost text-xl md:text-xl bg-[#a3e635]"
+            >Donation</a
+          >
 
-          <a class="btn btn-ghost text-xl md:text-xl border-gray-300"
+          <a
+            id="show-history"
+            class="btn btn-ghost text-xl md:text-xl border-gray-300"
             >History</a
           >
         </div>
@@ -52,143 +58,146 @@
       </div>
     </header>
     <main class="mt-24 w-11/12 mx-auto">
-      <!-- Card Section Noakhali -->
-      <div
-        class="border flex-col md:flex-row card card-side bg-base-100 shadow-xl p-8 w-11/12 mx-auto mb-5 z-0"
-      >
-        <figure class="w-full md:w-1/2">
-          <img src="./assets/noakhali.png" alt="Movie" />
-        </figure>
-        <div class="card-body w-full md:w-1/2">
-          <span class="flex bg-gray-300 w-[200px] p-3 rounded-lg"
-            ><img src="./assets/coin.png" alt="" />
-            <span class="text-xl font-bold ml-1"
-              ><span id="noakhali-fund">1500</span> BDT</span
-            ></span
-          >
-          <p class="card-title text-3xl font-bold">
-            Donate for Flood at Noakhali, Bangladesh
-          </p>
-          <p class="text-xl text-justify">
-            The recent floods in Noakhali have caused significant damage to
-            homes infrastructure. Your donation will help provide essential
-            supplies and to those affected by this disaster. Every contribution,
-            big or small, makes difference. Please join us in supporting the
-            relief efforts and making a positive impact on the lives of those in
-            need.
-          </p>
-          <div class="card-actions justify-end">
-            <input
-              type="number"
-              name=""
-              id="noakhali-donate-input"
-              class="input w-full border-gray-300"
-              placeholder="Write Donation Amount"
-              id=""
-            />
-            <button
-              id="noakhali-donate"
-              class="btn btn-ghost text-xl w-full bg-[#a3e635]"
+      <div id="donation-cards">
+        <!-- Card Section Noakhali -->
+        <div
+          class="border flex-col md:flex-row card card-side bg-base-100 shadow-xl p-8 w-11/12 mx-auto mb-5 z-0"
+        >
+          <figure class="w-full md:w-1/2">
+            <img src="./assets/noakhali.png" alt="Movie" />
+          </figure>
+          <div class="card-body w-full md:w-1/2">
+            <span class="flex bg-gray-300 w-[200px] p-3 rounded-lg"
+              ><img src="./assets/coin.png" alt="" />
+              <span class="text-xl font-bold ml-1"
+                ><span id="noakhali-fund">1500</span> BDT</span
+              ></span
             >
-              Donate Now
-            </button>
+            <p class="card-title text-3xl font-bold">
+              Donate for Flood at Noakhali, Bangladesh
+            </p>
+            <p class="text-xl text-justify">
+              The recent floods in Noakhali have caused significant damage to
+              homes infrastructure. Your donation will help provide essential
+              supplies and to those affected by this disaster. Every
+              contribution, big or small, makes difference. Please join us in
+              supporting the relief efforts and making a positive impact on the
+              lives of those in need.
+            </p>
+            <div class="card-actions justify-end">
+              <input
+                type="number"
+                name=""
+                id="noakhali-donate-input"
+                class="input w-full border-gray-300"
+                placeholder="Write Donation Amount"
+                id=""
+              />
+              <button
+                id="noakhali-donate"
+                class="btn btn-ghost text-xl w-full bg-[#a3e635]"
+              >
+                Donate Now
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Card Section Feni -->
-      <div
-        class="border flex-col md:flex-row card card-side bg-base-100 shadow-xl p-8 w-11/12 mx-auto mb-5 z-0"
-      >
-        <figure class="w-full md:w-1/2">
-          <img src="./assets/noakhali.png" alt="Movie" />
-        </figure>
-        <div class="card-body w-full md:w-1/2">
-          <span class="flex bg-gray-300 w-[200px] p-3 rounded-lg"
-            ><img src="./assets/coin.png" alt="" />
-            <span class="text-xl font-bold ml-1"
-              ><span id="feni-fund">1500</span> BDT</span
-            ></span
-          >
-          <p class="card-title text-3xl font-bold">
-            Donate for Flood at Feni, Bangladesh
-          </p>
-          <p class="text-xl text-justify">
-            The recent floods in Feni have devastated local communities, leading
-            to severe disruption and loss. Your generous donation will help
-            provide immediate aid, including food, clean water, and medical
-            supplies, to those affected by this calamity. Together, we can offer
-            crucial support and help rebuild lives in the aftermath of this
-            disaster. Every contribution counts towards making a real
-            difference. Please consider donating today to assist those in urgent
-            need.
-          </p>
-          <div class="card-actions justify-end">
-            <input
-              type="number"
-              name=""
-              id="input1"
-              class="input w-full border-gray-300"
-              placeholder="Write Donation Amount"
-              id=""
-            />
-            <button
-              onclick="upDateCardBalance(1)"
-              class="btn btn-ghost text-xl w-full bg-[#a3e635]"
+        <!-- Card Section Feni -->
+        <div
+          class="border flex-col md:flex-row card card-side bg-base-100 shadow-xl p-8 w-11/12 mx-auto mb-5 z-0"
+        >
+          <figure class="w-full md:w-1/2">
+            <img src="./assets/noakhali.png" alt="Movie" />
+          </figure>
+          <div class="card-body w-full md:w-1/2">
+            <span class="flex bg-gray-300 w-[200px] p-3 rounded-lg"
+              ><img src="./assets/coin.png" alt="" />
+              <span class="text-xl font-bold ml-1"
+                ><span id="noakhali-fund">1500</span> BDT</span
+              ></span
             >
-              Donate Now
-            </button>
+            <p class="card-title text-3xl font-bold">
+              Aid for Injured in the Quota Movement
+            </p>
+            <p class="text-xl text-justify">
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
+            </p>
+            <div class="card-actions justify-end">
+              <input
+                type="number"
+                name=""
+                id="noakhali-donate-input"
+                class="input w-full border-gray-300"
+                placeholder="Write Donation Amount"
+                id=""
+              />
+              <button
+                id="noakhali-donate"
+                class="btn btn-ghost text-xl w-full bg-[#a3e635]"
+              >
+                Donate Now
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Card Section Quota Movement -->
-      <div
-        class="border flex-col md:flex-row card card-side bg-base-100 shadow-xl p-8 w-11/12 mx-auto mb-5 z-0"
-      >
-        <figure class="w-full md:w-1/2">
-          <img src="./assets/noakhali.png" alt="Movie" />
-        </figure>
-        <div class="card-body w-full md:w-1/2">
-          <span class="flex bg-gray-300 w-[200px] p-3 rounded-lg"
-            ><img src="./assets/coin.png" alt="" />
-            <span class="text-xl font-bold ml-1"
-              ><span id="noakhali-fund">1500</span> BDT</span
-            ></span
-          >
-          <p class="card-title text-3xl font-bold">
-            Aid for Injured in the Quota Movement
-          </p>
-          <p class="text-xl text-justify">
-            The recent Quota movement has resulted in numerous injuries and
-            significant hardship for many individuals. Your support is crucial
-            in providing medical assistance, rehabilitation, and necessary
-            supplies to those affected. By contributing, you help ensure that
-            injured individuals receive the care and support they need during
-            this challenging time. Every donation plays a vital role in
-            alleviating their suffering and aiding in their recovery. Please
-            consider making a donation to support these brave individuals in
-            their time of need.
-          </p>
-          <div class="card-actions justify-end">
-            <input
-              type="number"
-              name=""
-              id="noakhali-donate-input"
-              class="input w-full border-gray-300"
-              placeholder="Write Donation Amount"
-              id=""
-            />
-            <button
-              id="noakhali-donate"
-              class="btn btn-ghost text-xl w-full bg-[#a3e635]"
+        <!-- Card Section Quota Movement -->
+        <div
+          class="border flex-col md:flex-row card card-side bg-base-100 shadow-xl p-8 w-11/12 mx-auto mb-5 z-0"
+        >
+          <figure class="w-full md:w-1/2">
+            <img src="./assets/noakhali.png" alt="Movie" />
+          </figure>
+          <div class="card-body w-full md:w-1/2">
+            <span class="flex bg-gray-300 w-[200px] p-3 rounded-lg"
+              ><img src="./assets/coin.png" alt="" />
+              <span class="text-xl font-bold ml-1"
+                ><span id="noakhali-fund">1500</span> BDT</span
+              ></span
             >
-              Donate Now
-            </button>
+            <p class="card-title text-3xl font-bold">
+              Aid for Injured in the Quota Movement
+            </p>
+            <p class="text-xl text-justify">
+              The recent Quota movement has resulted in numerous injuries and
+              significant hardship for many individuals. Your support is crucial
+              in providing medical assistance, rehabilitation, and necessary
+              supplies to those affected. By contributing, you help ensure that
+              injured individuals receive the care and support they need during
+              this challenging time. Every donation plays a vital role in
+              alleviating their suffering and aiding in their recovery. Please
+              consider making a donation to support these brave individuals in
+              their time of need.
+            </p>
+            <div class="card-actions justify-end">
+              <input
+                type="number"
+                name=""
+                id="noakhali-donate-input"
+                class="input w-full border-gray-300"
+                placeholder="Write Donation Amount"
+                id=""
+              />
+              <button
+                id="noakhali-donate"
+                class="btn btn-ghost text-xl w-full bg-[#a3e635]"
+              >
+                Donate Now
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- History Section -->
-      <div>
+      <div id="history-section" class="hidden">
         <div class="w-11/12 border p-7 mx-auto rounded-xl">
           <h2 class="font-bold text-3xl mb-4">
             96500 Taka is Donated for famine-2024 at Feni, Bangladesh
@@ -203,8 +212,7 @@
     <footer>
       <div class="bg-orange-100 h-48 mt-16"></div>
     </footer>
-
     <script src="./js/utilities.js"></script>
-    <script src="./js/donate.js"></script>
+    <script src="./js/noakhali-donate.js"></script>
   </body>
 </html>
